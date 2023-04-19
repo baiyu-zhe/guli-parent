@@ -23,4 +23,12 @@ public class GlobalExceptionHandler {
         e.printStackTrace();
         return R.error().message("执行了ArithmeticException异常处理...");
     }
+
+    //自定义异
+    @ExceptionHandler(GuliException.class)
+    @ResponseBody // 返回数据
+    public R error(GuliException e) {
+        e.printStackTrace();
+        return R.error().code(e.getCode()).message(e.getMsg());
+    }
 }
