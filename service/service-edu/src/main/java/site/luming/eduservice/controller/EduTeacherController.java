@@ -64,12 +64,11 @@ public class EduTeacherController {
             @ApiParam(name = "limit", value = "每页记录数", required = true)
             @PathVariable Long limit){
 
-
-        try {
+        /*try {
             int i = 10/0;
         } catch (Exception e) {
             throw new GuliException(20001, "执行了自定义异常处理");
-        }
+        }*/
 
         Page<EduTeacher> pageParam = new Page<>(page, limit);
 
